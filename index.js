@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import connectDB from './config/db.js'
 import mapRouter from './routes/mapRoutes.js'
+import feedbackRouter from './routes/feedbackRoutes.js'
 
 // app config
 const app = express()
