@@ -3,7 +3,6 @@ import cors from 'cors'
 import connectDB from './config/db.js'
 import mapRouter from './routes/mapRoutes.js'
 
-
 // app config
 const app = express()
 const port = process.env.PORT || 4000;
@@ -17,8 +16,7 @@ connectDB();
 
 // API endpoints
 app.use("/api/map",mapRouter)
-// app.use("/api/map",mapRouter)
-
+app.use("/api/feedback",feedbackRouter)
 
 app.get('/',(req,res)=>{
     res.send("Api working")
